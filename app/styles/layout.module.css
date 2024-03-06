@@ -3,16 +3,26 @@
   grid-template-areas:
     "nav"
     "header"
-    "main"
-    "footer";
+    "main";
   grid-template-rows: auto auto 1fr 36px;
-  align-items: center;
-  min-height: 100vh;
+  display:flex;
+  flex-direction: row;
 }
 
 .logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.sideBar {
+  display: flex;
+  align-items: top;
+  width: 30vw;
+  justify-content: center;
+}
+
+.multiline {
+  white-space: pre-wrap;
 }
 
 .header {
@@ -21,12 +31,33 @@
 
 .main {
   grid-area: main;
+  width: 70vw
 }
 
-.header,
+.headerText{
+  font-size: large;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 0.5%;
+}
+
+.header {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(5, 5, 65);
+}
+
+.headersSVG{
+  fill: white;
+  width: 2.25vw;
+  height: 2.25vw;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 0.5%;
+}
+
 .main {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
